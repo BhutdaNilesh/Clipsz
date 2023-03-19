@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,17 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor(private router: Router){}
+
   credentials={
     email:'',
     password:''
   }
 
-  login(){
-    // console.log(this.credentials.email)
+  async login(){
+    alert("Login Successfull"),
+    await this.router.navigateByUrl('/')
   }
+
+
 }
