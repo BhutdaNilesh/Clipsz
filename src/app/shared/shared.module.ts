@@ -5,6 +5,8 @@ import { TabsContainerComponent } from './tabs-container/tabs-container.componen
 import { TabComponent } from './tab/tab.component';
 import { InputComponent } from './input/input.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { EventBlockerDirective } from './directives/event-blocker.directive';
+import { AlertComponent } from './alert/alert.component';
 
 
 
@@ -13,7 +15,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     ModalComponent,
     TabsContainerComponent,
     TabComponent,
-    InputComponent
+    InputComponent,
+    EventBlockerDirective,
+    AlertComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +28,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     ModalComponent,
     TabComponent,
     TabsContainerComponent,
-    InputComponent
+    InputComponent,
+    EventBlockerDirective
   ]
 })
 export class SharedModule { }

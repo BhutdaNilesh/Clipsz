@@ -25,6 +25,7 @@ export class ModalService {
     return !!this.modals.find(element=> (element.id===id))?.visible;
   }
 
+  
   toggleModal(id:string){
     const modal = this.modals.find(element=>(element.id===id));
 

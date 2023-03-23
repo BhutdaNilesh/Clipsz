@@ -13,26 +13,34 @@ import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoModule } from './video/video.module';
 import { UploadComponent } from './upload/upload.component';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { SharedModule } from "./shared/shared.module";
+import {AngularFireStorageModule} from '@angular/fire/compat/storage'
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    HomeComponent,
-    AboutComponent,
-    UploadComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    UserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    BrowserAnimationsModule,
-    VideoModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavComponent,
+        HomeComponent,
+        AboutComponent,
+        UploadComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        UserModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireAuthModule,
+        BrowserAnimationsModule,
+        VideoModule,
+        AngularFirestoreModule,
+        SharedModule,
+        AngularFireStorageModule,
+        ReactiveFormsModule
+    ]
 })
 export class AppModule { }
